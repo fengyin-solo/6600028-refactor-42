@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useFluidStore } from '../store/fluid'
-import { PRESETS } from '../utils/sph-engine'
+import { PRESETS } from '../config/presets'
 import type { Preset } from '../types'
 
 const store = useFluidStore()

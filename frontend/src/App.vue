@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import { useFluidStore } from './store/fluid'
-import { PRESETS } from './utils/sph-engine'
+import { PRESETS } from './config/presets'
 import FluidCanvas from './components/FluidCanvas.vue'
 import ControlPanel from './components/ControlPanel.vue'
 

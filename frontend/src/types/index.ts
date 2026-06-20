@@ -21,11 +21,21 @@ export interface SimParams {
   boundaryStiffness: number;
 }
 
+export interface IParticleInitializer {
+  readonly name: string;
+  generate(count: number, width: number, height: number): Particle[];
+}
+
+export interface IInteractor {
+  readonly name: string;
+  apply(particles: Particle[], x: number, y: number, params: SimParams): void;
+}
+
 export interface Preset {
   name: string;
   label: string;
   description: string;
   params: Partial<SimParams>;
   particleCount: number;
-  initialConfig: 'dam' | 'drop' | 'fountain' | 'wave';
+  initializer: string;
 }
